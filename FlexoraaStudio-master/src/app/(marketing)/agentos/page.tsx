@@ -186,7 +186,7 @@ const WorkflowNode = ({ icon, title, description, index }: { icon: React.ReactNo
   const isInView = useInView(ref, { threshold: 0.5 });
 
   return (
-    <div ref={ref} className={cn("flex items-start gap-4 md:gap-8 transition-opacity duration-700 ease-out", isInView ? "opacity-100" : "opacity-0")}>
+    <div ref={ref} className={cn("flex items-start gap-4 md:gap-8 transition-opacity duration-300 ease-out", isInView ? "opacity-100" : "opacity-0")}>
       <div className="w-1/2 md:hidden" />
       <div className={cn("w-1/2 md:w-full", index % 2 === 0 ? "md:text-left" : "md:text-right")}>
         <div className="p-4 md:p-6 rounded-lg bg-card border shadow-lg hover:shadow-primary/20 transition-shadow">
