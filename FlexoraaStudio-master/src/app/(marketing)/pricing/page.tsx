@@ -216,8 +216,8 @@ export default function PricingPage() {
   return (
     <div>
         {/* Hero Section */}
-        <section className="py-20 md:py-28 animated-background">
-            <div className="container text-center">
+        <section className="min-h-[calc(100vh-4rem)] flex items-center animated-background">
+            <div className="container text-center py-20">
             <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tighter">
                 Flexible Pricing for Every <span className="gradient-text">Business</span>
             </h1>

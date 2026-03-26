@@ -14,7 +14,6 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/leados', label: 'LeadOS' },
   { href: '/agentos', label: 'AgentOS' },
-  { href: '/legalos', label: 'LegalOS' },
   { href: '/integrations', label: 'Integrations' },
   { href: '/pricing', label: 'Pricing' },
 ];
@@ -53,11 +52,11 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2 sm:space-x-4">
-          <Button variant="ghost" asChild>
-            <Link href="/dashboard">Dashboard</Link>
+          <Button variant="outline" className="hidden sm:inline-flex" asChild>
+            <Link href="/login">Login</Link>
           </Button>
           <Button className="hidden sm:inline-flex gradient-background text-primary-foreground hover:opacity-90" asChild>
-            <Link href="/quote">Get Started</Link>
+            <Link href="/signup">Get Started</Link>
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>

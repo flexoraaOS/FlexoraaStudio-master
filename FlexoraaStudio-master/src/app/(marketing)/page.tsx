@@ -161,8 +161,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-20 md:py-32 animated-background">
-          <div className="container text-center">
+        <section className="min-h-[calc(100vh-4rem)] flex items-center animated-background">
+          <div className="container text-center py-20">
             <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tighter">
               Flexoraa <span className="gradient-text whitespace-nowrap">Intelligence OS</span>
             </h1>

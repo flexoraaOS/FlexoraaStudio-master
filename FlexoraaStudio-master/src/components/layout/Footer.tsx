@@ -49,7 +49,6 @@ export function Footer() {
         </div>
         <div className="mt-8 border-t border-border/40 pt-6 text-center text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Flexoraa. All rights reserved.</p>
-          <p className="mt-1">Flexoraa Intelligence OS™ is a flagship product of Flexoraa®.</p>
         </div>
       </div>
     </footer>

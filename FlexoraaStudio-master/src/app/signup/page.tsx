@@ -54,7 +54,7 @@ function AppleIcon(props: React.SVGProps<SVGSVGElement>) {
   )
 }
 
-export default function LoginPage() {
+export default function SignUpPage() {
   return (
     <div className="flex items-center justify-center min-h-screen animated-background p-4">
       <Card className="w-full max-w-sm mx-auto">
@@ -62,27 +62,40 @@ export default function LoginPage() {
             <div className="flex justify-center mb-4">
                 <Logo />
             </div>
-          <CardTitle className="text-3xl font-bold font-headline">Welcome Back</CardTitle>
-          <CardDescription>Enter your credentials to access your dashboard.</CardDescription>
+          <CardTitle className="text-3xl font-bold font-headline">Create Account</CardTitle>
+          <CardDescription>Get started with Flexoraa Intelligence OS today.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="firstName">First Name</Label>
+              <Input id="firstName" placeholder="John" required />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="lastName">Last Name</Label>
+              <Input id="lastName" placeholder="Doe" required />
+            </div>
+          </div>
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input id="email" type="email" placeholder="name@example.com" required />
           </div>
           <div className="space-y-2">
-            <div className="flex items-center">
-              <Label htmlFor="password">Password</Label>
-              <Link href="#" className="ml-auto inline-block text-sm text-muted-foreground hover:text-primary transition-colors">
-                Forgot password?
-              </Link>
-            </div>
-            <Input id="password" type="password" required />
+            <Label htmlFor="company">Company Name</Label>
+            <Input id="company" placeholder="Your company" />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="password">Password</Label>
+            <Input id="password" type="password" placeholder="Create a strong password" required />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="confirmPassword">Confirm Password</Label>
+            <Input id="confirmPassword" type="password" placeholder="Confirm your password" required />
           </div>
         </CardContent>
         <CardFooter className="flex flex-col gap-4">
           <Button className="w-full gradient-background text-primary-foreground hover:opacity-90">
-            Sign In
+            Create Account
           </Button>
           <div className="relative w-full">
             <div className="absolute inset-0 flex items-center">
@@ -90,30 +103,24 @@ export default function LoginPage() {
             </div>
             <div className="relative flex justify-center text-xs uppercase">
               <span className="bg-card px-2 text-muted-foreground">
-                Or continue with
+                Or sign up with
               </span>
             </div>
           </div>
           <div className="w-full grid grid-cols-1 gap-2">
             <Button variant="outline" className="w-full">
                 <GoogleIcon className="mr-2 h-5 w-5" />
-                Sign in with Google
+                Sign up with Google
             </Button>
             <Button variant="outline" className="w-full">
                 <AppleIcon className="mr-2 h-5 w-5" />
-                Sign in with Apple
+                Sign up with Apple
             </Button>
           </div>
-          <Button variant="outline" className="w-full border-dashed border-primary/50 text-muted-foreground hover:bg-primary/5 hover:text-primary" asChild>
-            <Link href="/choose-agent">
-              <span className="mr-2 px-1.5 py-0.5 rounded-sm bg-primary/20 text-primary text-[10px] font-bold tracking-wider uppercase">Dev</span>
-              Access Dashboard Directly
-            </Link>
-          </Button>
           <div className="mt-2 text-center text-sm text-muted-foreground">
-            Don&apos;t have an account?{' '}
-            <Link href="/signup" className="text-primary hover:underline font-medium">
-              Create Account
+            Already have an account?{' '}
+            <Link href="/login" className="text-primary hover:underline font-medium">
+              Sign In
             </Link>
           </div>
         </CardFooter>
